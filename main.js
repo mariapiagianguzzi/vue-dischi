@@ -9,13 +9,13 @@ $(document).ready(function () {
   let app = new Vue({
     el: "#app",
     data: {
-      listaCd: "",
+      listaCd: "", //contenitore dove devo mettere le informazioni
     },
     mounted() {
       axios
-        .get("https://flynn.boolean.careers/exercises/api/array/music")
+        .get("https://flynn.boolean.careers/exercises/api/array/music") //le informazioni le prendo in questo link che è un API ci permette di manipolare le informazioni
         .then((response) => {
-          let cd = response.data.response;
+          let cd = response.data.response; // è il mio contenitore che contiene responde.data.response più precisamente il percorso dove io voglio andare a prendere le informazioni
           this.listaCd = cd;
         });
     },

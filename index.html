@@ -23,7 +23,7 @@
         <!-- Disco ad esempio -->
         <div class="cd" v-for="cd in listaCd">
           <img :src="cd.poster" alt="" />
-          <h3>Ten's Summoners Tales</h3>
+          <h3>{{ cd.title }}</h3>
           <span class="author">{{ cd.author }}</span>
           <span class="year">{{ cd.year }}</span>
         </div>
